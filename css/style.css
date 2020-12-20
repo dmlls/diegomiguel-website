@@ -46,7 +46,7 @@ p {
 .main-container {
     width: 100vw;
     height: 100vh;
-    padding: 60px 0 60px 60px;
+    padding: 2vw 0 2vw 2vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -70,7 +70,7 @@ p {
 .left-cover .fill {
     width: 100%;
     height: 100%;
-    border-radius: 15px 0 0 15px;
+    border-radius: 0.7vw 0 0 0.7vw;
     background-color: #e94f4a;
 }
 
@@ -91,7 +91,7 @@ p {
     padding: 15px;
     box-sizing: border-box;
     font-size: 1.1vw;
-    border-radius: 10px;
+    border-radius: 0.6vw;
     background-color: #4b4b4b88;
     font-family: 'IBMPlexMono';
     color: white;
@@ -112,7 +112,7 @@ p {
 }
 
 .terminal-row:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 1vh
 }
 
 .prompt {
@@ -155,12 +155,11 @@ p {
     height: 110%;
     object-fit: contain;
     object-position: 0 100%;
-    border-radius: 25px 0px 0px 25px;
     pointer-events: none;
 }
 
 .side-bar {
-    width: 70px;
+    width: 4%;
     height: 100%;
     position: relative;
     background-color: white;
@@ -174,18 +173,29 @@ p {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    text-align: center;
 }
 
 .social button {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     padding: 0;
-    margin: 10px;
     background-color: transparent;
     box-shadow: inset 0 0 0 0 transparent;
     border: none;
     border-radius: 100%;
     transition: 0.7s ease-out;
+}
+
+
+.social a {
+    width: 5vh;
+    height: 5vh;
+    display: block;
+}
+
+.social > a:not(:last-child) {
+    margin-bottom: 2vh
 }
 
 .social button:hover {
@@ -201,6 +211,82 @@ p {
 
 .social img {
     transition: 0.6s ease-in;
-    width: 20px;
-    height: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 16vw;
+        line-height: 100%;
+    }
+
+    .main-container {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .left-cover .fill {
+        width: 60%;
+        border-radius: 0;
+    }
+
+    .text-container {
+        width: 95%;
+        top: 15vh;
+        left: 50%;
+        right: unset;
+        transform: translate(-50%);
+    }
+
+    .text-container h1 {
+        text-align: right;
+        margin-left: auto;
+        margin-right: 6vw;;
+    }
+
+    .terminal {
+        margin-top: 2vh;
+        padding: 1vh 0 1vh 1.5vw;
+        border-radius: 2vw;
+    }
+
+    .terminal-row {
+        font-size: 2.7vw;
+    }
+
+    .terminal-row:first-child {
+        font-size: 2.9vw;
+    }
+
+    .terminal-row:not(:last-child) {
+        margin-bottom: 5px;
+    }
+
+    .row-left {
+        text-indent: 1vw;
+    }
+
+    .script {
+        flex: 1.3;
+    }
+
+    .avatar {
+        flex: 0.001;
+    }
+
+    .avatar-img {
+        height: 70vh;
+        right: -10vw;
+        z-index: 2;
+    }
+
+    .side-bar {
+        width: 50px;
+    }
+
+    .social button {
+        width: 5vh;
+        height: 5vh;
+    } 
 }
