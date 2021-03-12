@@ -8,25 +8,48 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8">
 </head>
-<body>
+<body class="preload">
     <div class="main-container">
         <div class="about-me">
             <div class="left-cover">
                 <div class="fill"></div>
             </div>
             <div class="text-container">
-                <h1>Diego</h1>
-                <h1>Miguel</h1>
+                <div class="my-name">
+                    <h1>Diego</h1>
+                    <h1>Miguel</h1>
+                </div>
                 <div class="terminal">
-                    <div class="terminal-row">
+                    <div class="terminal-row title">
                         <p class="prompt">[root@diegomiguel]#</p>
-                        <p class="script">./computer_engineering.sh</p>
+                        <p class="script">./bachelors_degree.sh</p>
                     </div>
                     <div class="terminal-row">
-                        <p class="row-left">  -> Bachelor's degree</p>
-                        <p class="row-right">[#############-]</p>
-                        <p class="percentage">97%</p>
+                        <p class="row-left">-> BSc Computer Engineering</p>
+                        <p class="row-center percentage-bar">[################]</p>
+                        <p class="row-right">100%</p>
+                    </div>
+                    <div class="terminal-row hidden">
+                        <p class="row-left">&nbsp;&nbsp;&nbsp;University of Burgos</p>
+                        <p class="row-center">Avg. grade:</p>
+                        <p class="row-right">9.13/10</p>
+                    </div>
+                    <div class="terminal-row title">
+                        <p class="prompt">[root@diegomiguel]#</p>
+                        <p class="script">./masters_degree.sh</p>
+                    </div>
+                    <div class="terminal-row">
+                        <p class="row-left">-> MSc Informatics</p>
+                        <p class="row-center percentage-bar">[##--------------]</p>
+                        <p class="row-right">4%</p>
+                    </div>
+                    <div class="terminal-row hidden">
+                        <p class="row-left">&nbsp;&nbsp;&nbsp;Technical University of Munich</p>
+                    </div>
+                    <div class="terminal-row">
+                        <img class="expand-more facing-down" src="images/expand-button.svg">
                     </div>
                 </div>
             </div>
@@ -51,8 +74,14 @@
                         <img src="images/stack-overflow-logo.svg">
                     </button>
                 </a>
+                <a href="mailto:hello@diegomiguel.me" target="_blank">
+                    <button class="stack-overflow">
+                        <img src="images/email.svg">
+                    </button>
+                </a>
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
