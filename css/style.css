@@ -20,6 +20,13 @@
        url(../fonts/IBMPlexMono-Medium.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'TitilliumWeb';
+  src: url(../fonts/TitilliumWeb-SemiBold.woff2) format('woff2'),
+       url(../fonts/TitilliumWeb-SemiBold.woff) format('woff'),
+       url(../fonts/TitilliumWeb-SemiBold.ttf) format('truetype');
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -103,6 +110,7 @@ p {
     display: flex;
     flex-direction: column;
     max-width: 80%;
+    min-height: 13vw;
     margin-top: 3vh;
     margin-left: auto;
     padding: 1vw;
@@ -115,6 +123,54 @@ p {
 
 .terminal:hover {
     background-color: #1d1d1d9c;
+}
+
+.terminal-tabs {
+    width: 80%;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'TitilliumWeb';
+}
+
+.terminal-tab {
+    width: 100%;
+    border: 1.5px solid transparent;
+    border-radius: 0.4em;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+.section-hidden {
+    display: none;
+}
+
+.section-displayed {
+    display: inline-block;
+}
+
+.terminal-tab {
+    border-width: 0.1em;
+}
+
+.terminal-tab:nth-child(1) {
+    border-color: #ffffff70;
+}
+
+.terminal-tab:hover {
+    background-color: #ffffff20;
+}
+
+.terminal-tab > p {
+    margin: 0.2em;
+    text-indent: 0.4em;
+    font-size: min(1.15vw, 3.2vh);
+}
+
+.terminal-row > a {
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
 }
 
@@ -134,16 +190,23 @@ p {
 }
 
 .terminal-row:not(:last-child) {
-    margin-bottom: 1vh
+    margin-bottom: 1vh;
 }
 
-.terminal-row:last-child { margin-top: 2%;
+.terminal > .terminal-row:last-child {
+    margin-top: auto;
+    padding-top: 1vh;
+    height: 1.5em;
     justify-content: center;
+    opacity: 0.9;
+    cursor: pointer;
 }
 
-.hidden {
+.row-hidden {
+    position: relative;
     margin-top: -5%;
     opacity: 0;
+    z-index: -1;
 }
 
 .expand-more {
@@ -153,7 +216,6 @@ p {
 }
 
 .expand-more:hover {
-    cursor: pointer;
     opacity: 1;
 }
 
@@ -166,6 +228,13 @@ p {
     width: 18vw;
     box-sizing: border-box;
     text-indent: 0.3vw;
+}
+
+.wrap-text {
+    margin-left: 0.3vw;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    white-space: normal;
 }
 
 .row-center {
@@ -259,7 +328,13 @@ p {
     height: 50%;
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
+@media (max-height: 800px) and (orientation: portrait) {
+    .avatar-img {
+        height: 55vh !important;
+    }
+}
+
+@media (max-width: 750px) and (orientation: portrait) {
     .text-container {
         right: unset;
     }
@@ -274,16 +349,16 @@ p {
     }
 }
 
-@media (min-width: 900px) and (orientation: portrait) {
+@media (min-width: 800px) and (orientation: portrait) {
     .avatar-img {
         right: -4vw;
-        height: 55vh !important;
+        height: 50vh !important;
     }
 }
 
 @media (orientation: portrait) {
     h1 {
-        font-size: min(16vw, 16vh);
+        font-size: min(18vw, 18vh);
         line-height: 100%;
         text-align: left;
     }
@@ -301,7 +376,7 @@ p {
     .text-container {
         top: 10vh;
         left: 50%;
-        width: 80%;
+        width: 90%;
         transform: translate(-50%);
     }
 
@@ -312,17 +387,29 @@ p {
         border-radius: 2vw;
     }
 
+    .terminal-tabs {
+        width: 100%;
+    }
+
+    .terminal-tabs p {
+        font-size: min(5.5vh, 2.95vw);
+    }
+
+    .terminal-row:not(:last-child) {
+        margin-bottom: 1%;
+    }
+
     .terminal-row .prompt,
     .terminal-row .script {
         width: auto;
-        font-size: min(5vh, 2.45vw);
+        font-size: min(5.8vh, 2.85vw);
     }
 
     .terminal-row .row-left,
     .terminal-row .row-center,
     .terminal-row .row-right {
         width: auto;
-        font-size: min(5vh, 2.45vw);
+        font-size: min(5.6vh, 2.65vw);
     }
 
     .terminal-row .row-center {
@@ -332,6 +419,9 @@ p {
     .terminal-row .row-right {
         position: absolute;
         right: 5%;
+    }
+    .terminal-row .wrap-text {
+        font-size: min(5vh, 2.45vw);
     }
 
     .row-center.percentage-bar {
@@ -372,14 +462,14 @@ p {
         margin-top: -5%;
     }
     to {
-        opacity: 1;
+        opacity: 0.9;
         margin-top: 0;
     }
 }
 
 @keyframes fade-out-anim {
     from {
-        opacity: 1;
+        opacity: 0.9;
         margin-top: 0;
     }
     to {
@@ -398,14 +488,14 @@ p {
         rotate: 180deg;
     }
     100% {
-        opacity: 1;
+        opacity: 0.9;
         rotate: 180deg;
     }
 }
 
 @keyframes rotate-down-anim {
     0% {
-        opacity: 1;
+        opacity: 0.9;
         rotate: 180deg;
     }
     49% {
@@ -417,15 +507,16 @@ p {
         rotate: 0deg;
     }
     100% {
-        opacity: 1;
+        opacity: 0.9;
     }
 }
 
-.hidden {
+
+.row-hidden {
     animation: fade-out-anim 0.4s ease-in-out forwards;
 }
 
-.displayed {
+.row-displayed {
     animation: fade-in-anim 0.4s ease-in-out forwards;
 }
 

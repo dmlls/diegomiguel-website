@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0/>
     <meta charset="utf-8">
 </head>
 <body class="preload">
@@ -22,31 +22,80 @@
                     <h1>Miguel</h1>
                 </div>
                 <div class="terminal">
-                    <div class="terminal-row title">
-                        <p class="prompt">[root@diegomiguel]#</p>
-                        <p class="script">./bachelors_degree.sh</p>
+                    <div class="terminal-tabs">
+                        <div class="terminal-tab education-tab">
+                            <p>📚&nbsp;&nbsp;Education</p>
+                        </div>
+                        <div class="terminal-tab work-tab">
+                            <p>👨🏻‍💻&nbsp;&nbsp;Work</p>
+                        </div>
+                        <div class="terminal-tab projects-tab">
+                            <p>🤖&nbsp;&nbsp;Projects</p>
+                        </div>
                     </div>
-                    <div class="terminal-row">
-                        <p class="row-left">-> BSc Computer Engineering</p>
-                        <p class="row-center percentage-bar">[################]</p>
-                        <p class="row-right">100%</p>
+                    <div class="education section-displayed">
+                        <div class="terminal-row title">
+                            <p class="prompt">[root@diegomiguel]#</p>
+                            <p class="script">./bachelors_degree.sh</p>
+                        </div>
+                        <div class="terminal-row">
+                            <p class="row-left">-> BSc Computer Engineering</p>
+                            <p class="row-center percentage-bar">[################]</p>
+                            <p class="row-right">100%</p>
+                        </div>
+                        <div class="terminal-row row-hidden">
+                            <a href="https://www.ubu.es" target="_blank">
+                                <p class="row-left">&nbsp;&nbsp;&nbsp;University of Burgos</p>
+                            </a>
+                            <p class="row-center">Avg. grade:</p>
+                            <p class="row-right">9.13/10</p>
+                        </div>
+                        <div class="terminal-row title">
+                            <p class="prompt">[root@diegomiguel]#</p>
+                            <p class="script">./masters_degree.sh</p>
+                        </div>
+                        <div class="terminal-row">
+                            <p class="row-left">-> MSc Informatics</p>
+                            <p class="row-center percentage-bar">[###-------------]</p>
+                            <p class="row-right">16%</p>
+                        </div>
+                        <div class="terminal-row row-hidden">
+                            <a href="https://www.tum.de/en" target="_blank">
+                                <p class="row-left">&nbsp;&nbsp;&nbsp;Technical University of Munich</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="terminal-row hidden">
-                        <p class="row-left">&nbsp;&nbsp;&nbsp;University of Burgos</p>
-                        <p class="row-center">Avg. grade:</p>
-                        <p class="row-right">9.13/10</p>
+                    <div class="work section-hidden">
+                        <div class="terminal-row title">
+                            <p class="prompt">[root@diegomiguel]#</p>
+                            <p class="script">./working_student.sh</p>
+                        </div>
+                        <div class="terminal-row">
+                            <a href="https://www.knowron.com" target="_blank">
+                                <p class="row-left">-> KNOWRON - NLP Engineer</p>
+                            </a>
+                        </div>
+                        <div class="terminal-row row-hidden">
+                            <p class="wrap-text">Knowron’s AI based personal assistant empowers
+                                service technicians with their everyday tasks.</p>
+                        </div>
                     </div>
-                    <div class="terminal-row title">
-                        <p class="prompt">[root@diegomiguel]#</p>
-                        <p class="script">./masters_degree.sh</p>
-                    </div>
-                    <div class="terminal-row">
-                        <p class="row-left">-> MSc Informatics</p>
-                        <p class="row-center percentage-bar">[###-------------]</p>
-                        <p class="row-right">16%</p>
-                    </div>
-                    <div class="terminal-row hidden">
-                        <p class="row-left">&nbsp;&nbsp;&nbsp;Technical University of Munich</p>
+                    <div class="projects section-hidden">
+                        <div class="terminal-row title">
+                            <p class="prompt">[root@diegomiguel]#</p>
+                            <p class="script">./nlp.sh</p>
+                        </div>
+                        <div class="terminal-row">
+                            <a href="https://www.jizt.it" target="_blank">
+                                <p class="row-left">-> Jizt - AI Summarization</p>
+                            </a>
+                        </div>
+                        <div class="terminal-row row-hidden">
+                            <p class="wrap-text">Jizt allows you to generate abstractive summaries
+                                from texts using the latest NLP models. And everything right from
+                                your pocket (or your desk ;).
+                            </p>
+                        </div>
                     </div>
                     <div class="terminal-row">
                         <img class="expand-more facing-down" src="images/expand-button.svg">
