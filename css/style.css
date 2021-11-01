@@ -1,20 +1,23 @@
 @font-face {
   font-family: 'Monoton';
   src: url(../fonts/Monoton-Regular.woff2) format('woff2'),
-       url(../fonts/Monoton-Regular.woff) format('woff');
+       url(../fonts/Monoton-Regular.woff) format('woff'),
+       url(../fonts/Monoton-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'IBMPlexMono';
   src: url(../fonts/IBMPlexMono-Bold.woff2) format('woff2'),
-       url(../fonts/IBMPlexMono-Bold.woff) format('woff');
+       url(../fonts/IBMPlexMono-Bold.woff) format('woff'),
+       url(../fonts/IBMPlexMono-Bold.ttf) format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'IBMPlexMono';
   src: url(../fonts/IBMPlexMono-Medium.woff2) format('woff2'),
-       url(../fonts/IBMPlexMono-Medium.woff) format('woff');
+       url(../fonts/IBMPlexMono-Medium.woff) format('woff'),
+       url(../fonts/IBMPlexMono-Medium.ttf) format('truetype');
 }
 
 body {
@@ -37,9 +40,14 @@ h1 {
     font-family: 'Monoton';
     font-size: calc(20px + 8vw);
     color: #333333;
+    font-weight: normal;
     text-align: right;
     line-height: calc(20px + 8vw);
     user-select: none;
+}
+
+@supports (-moz-appearance:none) {
+    h1 { font-weight: bold; }
 }
 
 p {
