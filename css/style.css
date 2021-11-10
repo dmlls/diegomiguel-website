@@ -246,8 +246,28 @@ p {
 }
 
 .row-right {
-    width: 4.5em;
+    position: absolute;
+    right: 5%;
     text-align: right;
+}
+
+a.external-link {
+    display: flex;
+    transition: color 200ms;
+}
+
+a.external-link:hover {
+    color: #ffb0b0;
+}
+
+a.external-link > p::after {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin-left: 3%;
+    content: "";
+    background: transparent no-repeat url(../images/external-link.svg);
+    transform: translateY(5%);
 }
 
 .avatar {
@@ -510,7 +530,6 @@ p {
         opacity: 0.9;
     }
 }
-
 
 .row-hidden {
     animation: fade-out-anim 0.4s ease-in-out forwards;
