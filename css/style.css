@@ -115,7 +115,8 @@ p {
     margin-left: auto;
     padding: 1vw;
     border-radius: 0.6vw;
-    background-color: #4b4b4bb0;
+    background-color: #353535b0;
+    backdrop-filter: blur(15px);
     font-family: 'IBMPlexMono';
     color: white;
     transition: 0.4s ease-in-out;
@@ -203,6 +204,7 @@ p {
 }
 
 .row-hidden {
+    display: none;
     position: relative;
     margin-top: -5%;
     opacity: 0;
