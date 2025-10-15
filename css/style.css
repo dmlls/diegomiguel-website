@@ -266,7 +266,7 @@ a.external-link > p::after {
     display: inline-block;
     width: 50%;
     height: 50%;
-    margin-left: 3%;
+    margin-left: 2%;
     content: "";
     background: transparent no-repeat url(../images/external-link.svg);
     transform: translateY(5%);
