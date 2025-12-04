@@ -1,0 +1,12 @@
+@import url("font-face.css") layer(base);
+@import "tailwindcss";
+@import "flowbite/src/themes/minimal";
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-rubik: "Rubik", sans-serif;
+    --font-din-next: "DINNext", sans-serif;
+}
