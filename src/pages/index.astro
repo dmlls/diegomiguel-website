@@ -5,7 +5,7 @@ import "../styles/global.css";
 <html lang="en" class="w-full h-full overflow-hidden">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Diego Miguel – Personal Website</title>
@@ -13,7 +13,9 @@ import "../styles/global.css";
     <body class="w-full h-full bg-[url(/bg.png)] bg-cover bg-position-[50%_0] bg-center-top flex flex-col overflow-auto">
         <div class="grow flex flex-col justify-center items-center">
             <div class="flex flex-col mx-auto my-4 pb-4 items-center bg-neutral-50/10 backdrop-blur-2xl p-4 border border-gray-400 rounded-base shadow-xs lg:flex-row lg:w-200">
-                <img class="object-cover w-72 rounded-2xl my-6 sm:my-13 lg:my-0" src="/profile.png" alt="">
+                <div class="w-72 rounded-2xl bg-linear-to-r from-blue-100/25 to-indigo-200/25 my-6 sm:my-13 lg:my-0">
+                    <img class="object-cover rounded-2xl" src="/profile.png" alt="">
+                </div>
                 <div>
                     <div class="py-1 flex h-full flex-col mx-2 sm:mx-4 lg:mx-8 leading-normal text-center lg:text-start ">
                         <h1 class="pb-5 text-5xl sm:text-6xl font-bold font-din-next tracking-tight text-nowrap text-transparent bg-linear-to-r from-violet-100 to-indigo-200 bg-clip-text">Diego<br>Miguel Lozano</h1>
@@ -54,7 +56,7 @@ import "../styles/global.css";
             </div>
         </div>
         <div class="bg-black w-full flex justify-center items-center opacity-30">
-            <span class="py-2 text-gray-400 text-end text-sm text-nowrap font-rubik opacity-80">© 2025 Diego Miguel Lozano</span>
+            <span class="py-2 text-gray-400 text-end text-sm text-nowrap font-rubik opacity-80">© 2026 Diego Miguel Lozano</span>
         </div>
     </body>
 </html>
